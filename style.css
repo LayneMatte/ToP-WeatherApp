@@ -1,0 +1,270 @@
+@font-face {
+    font-family: 'sono';
+    src: url(sono.ttf);
+}
+
+* {
+    font-family: sono;
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    box-sizing: border-box;
+    height: 100%;
+}
+.header {
+    box-sizing: border-box;
+    background-color: lightblue;
+    background-image: url(./clouds.png);
+    background-size: 3%;
+    background-repeat: no-repeat;
+    background-clip: border-box;
+    background-position: 250px 10px ;
+    background-attachment:fixed;
+    background-blend-mode: mulitply;
+    height: 15vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 5%;
+    padding-right: 5%;
+
+}
+.title {
+    font-size: 50px;
+    font-weight: 600;
+}
+.searchBar {
+    height: 4vh;
+    width: 50%;
+}
+.search {
+    height: 4vh;
+    width:80%;
+    font-size: 20px;
+}
+.toggle {
+    font-size: 30px;
+}
+footer {
+    height:4vh;
+    background-color:black;
+}
+.githubContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding:.2%;
+}
+
+.githubLogo {
+    height: 3vh;
+    width: 2vw;
+    padding-right: .5%;
+}
+.githubText{
+    color: white;
+    font-size: 15px;
+    font-family: monospace;
+}
+.main {
+    height: 81vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.mainContainer {
+    display:flex;
+    flex-direction: row;
+    height: 88%;
+}
+.mainLocation {
+    height: 12%;
+    font-size: 60px;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    font-family: monospace
+}
+.currentContainer {
+    width: 30%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 1%;
+    gap:10%;
+    justify-content: start;
+    align-items: start;
+    padding-left:2%;
+    border-right: 2px solid black;
+}
+.currentDateContainer {
+    font-size: 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    gap: 30%;
+    min-height: 5%;
+    min-width: 80%;
+    padding-left: 10%;
+}
+.currentCondition {
+    width: 80%;
+    text-align: center;
+    font-size: 40px;
+    font-style: italic;
+    border-bottom: 2px darkgrey solid;
+    padding: 1%;
+}
+.currentInfoContainer{
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+}
+.temp {
+    font-size: 55px;
+    padding-right: 10%;
+    padding-left: 10%;
+}
+.currentInfo{
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+}
+.currentPrecipContainer,.currentHumidityContainer,.currentWindContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.currentHighLowContainer {
+    font-size: 20px;
+    border-top:2px darkgrey solid ;
+    width: 80%;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 5%;
+}
+.weatherIcon {
+    width: 64px;
+    height: 64px;
+}
+.forecastContainer {
+    width: 70%;
+}
+.weekContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.weekContainer > * {
+    width:15% ;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-right: 2px solid darkgrey;
+    padding: 2%;
+}
+div[class*=dayDate]{
+    font-size: 35px;
+    width: 100%;
+    text-align: center;
+    font-style: italic;
+    border-bottom: 1px solid black;
+}
+div[class*=dayHigh]{
+    font-size: 30px;
+    text-align: center;
+    color: maroon;
+}
+div[class*=dayLow]{
+    font-size: 20px;
+    text-align: center;
+    color: darkblue;
+}
+div[class*=dayPrecip]{
+    font-size: 20px;
+    text-align: center;
+}
+div[class*=dayIcon]{
+    width: 64px;
+    height: 64px;
+}
+.day6 {
+    border-right: none;
+}
+ /* The switch - the box around the slider */
+ .switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    font-size: 20px;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 34px;
+    width: 30px;
+    left: 0px;
+    /* bottom: 4px; */
+    background-color: white;
+    opacity: 1;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    /* -webkit-transform: translateX(26px); */
+    /* -ms-transform: translateX(26px); */
+    transform: translateX(30px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 5px;
+  }
+  
+  .slider.round:before {
+    border-radius: 5px
+  } 

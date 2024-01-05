@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./main.js" defer></script>
+    <title>Weather App</title>
+</head>
+<body>
+    <header class="header">
+        <div class="title">4Cast</div>
+        <div class="searchBar">
+            <label for="search" class="searchText"></label>
+            <input type="text" class="search" placeholder="City Name">
+        </div>
+        <label class="switch">
+        <input type="checkbox" class="toggle">
+        <span class="slider round">C F</span>
+        </label>
+    </header>
+    <main class="main">
+        <div class="mainLocation"></div>
+        <div class="mainContainer">
+            <div class="currentContainer">
+                <div class="currentDateContainer">
+                    <div class="currentDateText">Today</div>
+                    <div class="currentDate">1/1</div>
+                </div>
+                <div class="currentCondition">Overcast</div>
+                <div class="currentInfoContainer">
+                    <img src="" alt="" class="weatherIcon">
+                    <div class="temp">25F</div>
+                    <div class="currentInfo">
+                        <div class="currentPrecipContainer">
+                            <div class="currentPrecipText">Precip</div>
+                            <div class="currentPrecip">1%</div>
+                        </div>
+                        <div class="currentHumidityContainer">
+                            <div class="currentHumidityText">Humidity</div>
+                            <div class="currentHumidity">78%</div>
+                        </div>
+                        <div class="currentWindContainer">
+                            <div class="currentWindText">Wind</div>
+                            <div class="currentWind">8 MPH</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="currentHighLowContainer">
+                    <div class="highLowText">High/Low:</div>
+                    <div class="highLow">76F / 86F</div>
+                </div>
+            </div>
+            <div class="forecastContainer">
+                <div class="weekContainer">
+                    <div class="day1" id="dayContainer">
+                        <div class="dayDate1">1/2</div>
+                        <div class="dayHigh1">86</div>
+                        <div class="dayLow1">30</div>
+                        <img src="./clouds.png" alt="weather-icon" class="dayIcon1">
+                        <div class="dayPrecip1">6%</div>
+                    </div>
+                    <div class="day2" id="dayContainer">
+                        <div class="dayDate2">1/2</div>
+                        <div class="dayHigh2">86</div>
+                        <div class="dayLow2">30</div>
+                        <img src="./clouds.png" alt="weather-icon" class="dayIcon2">
+                        <div class="dayPrecip2">6%</div>
+                    </div>
+                    <div class="day3" id="dayContainer">
+                        <div class="dayDate3">1/2</div>
+                        <div class="dayHigh3">86</div>
+                        <div class="dayLow3">30</div>
+                        <img src="./clouds.png" alt="weather-icon" class="dayIcon3">
+                        <div class="dayPrecip3">6%</div>
+                    </div>
+                    <div class="day4" id="dayContainer">
+                        <div class="dayDate4">1/2</div>
+                        <div class="dayHigh4">86</div>
+                        <div class="dayLow4">30</div>
+                        <img src="./clouds.png" alt="weather-icon" class="dayIcon4">
+                        <div class="dayPrecip4">6%</div>
+                    </div>
+                    <div class="day5" id="dayContainer">
+                        <div class="dayDate5">1/2</div>
+                        <div class="dayHigh5">86</div>
+                        <div class="dayLow5">30</div>
+                        <img src="./clouds.png" alt="weather-icon" class="dayIcon5">
+                        <div class="dayPrecip5">6%</div>
+                    </div>
+                    <div class="day6" id="dayContainer">
+                        <div class="dayDate6">1/2</div>
+                        <div class="dayHigh6">86</div>
+                        <div class="dayLow6">30</div>
+                        <img src="./clouds.png" at="weather-icon" class="dayIcon6">
+                        <div class="dayPrecip6">6%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="githubContainer">
+            <img src="./whitegithublogo.png" alt="github-logo" class="githubLogo">
+            <div class="githubText">@LayneMatte</div>
+        </div>
+    </footer>
+</body>
+</html>

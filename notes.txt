@@ -1,0 +1,43 @@
+MAIN STRUCTURE 
+LOCATION 
+Current Container -----
+Condition
+Temperature > Precipitaion > Humidity > Wind (WEATHER ICON TO THE RIGHT)
+High / Low
+Forecast Container -----
+6 DAY LIST ROW
+COLUMN: 
+DATE 
+HIGH (larger font)
+LOW(smaller font)
+WEATHER ICON
+PRECIP
+
+***USE TOGGLE CHECKED VALUE TO APPLY C VS F VALUES
+
+
+DATA LIST: 
+MAIN LOCATION: LOCATION
+CURRENT DATE: 
+    - DATE - .forecast.forecastday[0].date
+    - Condition - .current.condition.text
+    - Temperature - .current.temp_f OR .current.temp_c
+    - Precipitaion - data.forecast.forecastday[0].day.daily_chance_of_rain
+    - Humidity - .current.humidity
+    - Wind - .current.wind_mph OR .current.wind-kph
+    - High / Low 
+         - High: .forecast.forecastday[0].day.maxtemp_f OR 
+                .forecast.forecastday[0].day.maxtemp_c
+        - Low: .forecast.forecastday[0].day.mintemp_f OR 
+                .forecast.forecastday[0].day.mintemp_c
+FORECAST: 
+    FOR EACH DAY: 
+        - DATE - .forecast.forecastday[i].date
+        - HIGH
+            - .forecast.forecastday[i].day.maxtemp_f OR
+            .forecast.forecastday[i].day.maxtemp_c
+        - LOW
+            - forecast.forecastday[i].day.mintemp_f OR 
+            - forecast.forecastday[i].day.mintemp_c
+        - Precipitation
+            - .forecast.forecastday[1].day.daily_chance_of_rain
