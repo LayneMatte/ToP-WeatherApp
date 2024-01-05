@@ -19,7 +19,7 @@ let getData = function () {
   async function forecast(location = 'evansville') {
     try {
       let response = await fetch(
-        `http://api.weatherapi.com/v1/forecast.json?key=a1701304d4394a63b55164513240101&q=${location}&days=7`,
+        `https://api.weatherapi.com/v1/forecast.json?key=a1701304d4394a63b55164513240101&q=${location}&days=7`,
         { mode: 'cors' }
       );
       data = await response.json();
